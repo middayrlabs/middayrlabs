@@ -1,0 +1,124 @@
+.footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.85);
+}
+
+.inner {
+  padding-top: 64px;
+  padding-bottom: 48px;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── Brand ── */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: #fff;
+  transition: opacity 0.2s;
+}
+
+.logo:hover { opacity: 0.8; }
+
+.logoIcon {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.tagline {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.6;
+  max-width: 220px;
+}
+
+/* ── Nav ── */
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.navGroup { display: flex; flex-direction: column; gap: 12px; }
+
+.navTitle {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 4px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navLink {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.2s;
+}
+
+.navLink:hover { color: #fff; }
+
+/* ── Bottom bar ── */
+.bar {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.barInner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.copy {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.35);
+}
+
+.email {
+  font-size: 0.82rem;
+  color: var(--green-400);
+  transition: color 0.2s;
+}
+
+.email:hover { color: var(--green-300); }
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 48px;
+    padding-bottom: 32px;
+  }
+  .nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav { grid-template-columns: 1fr; }
+}
